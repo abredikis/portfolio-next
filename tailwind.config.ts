@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import fluid, { extract, fontSize } from "fluid-tailwind";
 import { FluidThemeConfig } from "fluid-tailwind";
+import typography from "@tailwindcss/typography";
 const config: Config = {
   content: {
     files: [
@@ -67,6 +68,6 @@ const config: Config = {
       DEFAULT: "250ms",
     },
   },
-  plugins: [fluid],
+  plugins: [fluid, typography],
 };
 export default config;
