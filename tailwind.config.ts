@@ -1,6 +1,9 @@
 import type { Config } from "tailwindcss";
 import fluid, { extract, fontSize } from "fluid-tailwind";
 import { FluidThemeConfig } from "fluid-tailwind";
+import typography from "@tailwindcss/typography";
+import type { ResolvableTo } from "tailwindcss/types/config";
+
 const config: Config = {
   content: {
     files: [
@@ -66,7 +69,25 @@ const config: Config = {
     transitionDuration: {
       DEFAULT: "250ms",
     },
+    extend: {
+      typography: (({ theme }) => ({
+        DEFAULT: {
+          css: {
+            "h1,h2,h3,h4,h5,h6": {
+              "@apply mb-[0.3em]": {},
+              "& + p, & + ul, & + ol": {
+                "@apply mt-0": {},
+              },
+            },
+            "p,ul,ol": {
+              "@apply max-w-prose": {},
+              "@apply my-[1.5em]": {},
+            },
+          },
+        },
+      })) satisfies ResolvableTo<Record<string, unknown>>,
+    },
   },
-  plugins: [fluid],
+  plugins: [fluid, typography],
 };
 export default config;
