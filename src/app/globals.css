@@ -6,6 +6,7 @@ span.ripple {
   transform: scale(0);
   animation-name: ripple;
   animation-fill-mode: forwards;
+  animation-duration: calc(theme(transitionDuration.DEFAULT) * 2);
 }
 
 @keyframes ripple {

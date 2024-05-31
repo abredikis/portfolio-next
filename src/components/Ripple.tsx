@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { cva } from "class-variance-authority";
 import { cn } from "../utils/cn";
@@ -20,33 +22,37 @@ interface RippleStyles extends React.CSSProperties {
   animationDuration: string;
 }
 
-export default function Ripple({ className, variant, targetRef }: RippleProps) {
-  const [ripples, setRipples] = useState<Ripple[]>([]);
-  const animationDuration = 600;
-
-  const rippleVariants = cva(
-    "ripple size-10 opacity-60 absolute rounded-full -ml-5 -mt-5 origin-center",
-    {
-      variants: {
-        variant: {
-          primary: "bg-primary-50",
-          secondary: "bg-primary-500",
-        },
+const rippleVariants = cva(
+  "ripple pointer-events-none select-none size-10 opacity-60 absolute rounded-full -ml-5 -mt-5 origin-center",
+  {
+    variants: {
+      variant: {
+        primary: "bg-primary-50",
+        secondary: "bg-primary-500",
       },
-    }
-  );
+    },
+  }
+);
+
+export default function Ripple({
+  className,
+  variant = "primary",
+  targetRef,
+}: RippleProps) {
+  const [ripples, setRipples] = useState<Ripple[]>([]);
+  const debouncedRipples = useDebounce(ripples);
 
   useEffect(() => {
+    const target = targetRef.current;
+
     const handleClick = (e: MouseEvent) => {
-      if (targetRef.current) {
-        const rect = targetRef.current.getBoundingClientRect();
+      if (target) {
+        const rect = target.getBoundingClientRect();
         const xPos = e.clientX - rect.left;
         const yPos = e.clientY - rect.top;
         setRipples((prev) => [...prev, { xPos, yPos }]);
       }
     };
-
-    const target = targetRef.current;
 
     if (target) {
       target.addEventListener("click", handleClick);
@@ -59,9 +65,9 @@ export default function Ripple({ className, variant, targetRef }: RippleProps) {
     };
   }, [targetRef]);
 
-  useDebounce(() => {
+  useEffect(() => {
     setRipples([]);
-  }, 400);
+  }, [debouncedRipples]);
 
   return (
     <>
@@ -74,7 +80,6 @@ export default function Ripple({ className, variant, targetRef }: RippleProps) {
               {
                 top: `${ripple.yPos}px`,
                 left: `${ripple.xPos}px`,
-                animationDuration: `${animationDuration}ms`,
               } as RippleStyles
             }
           ></span>
