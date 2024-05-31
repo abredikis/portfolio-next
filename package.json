@@ -22,7 +22,7 @@
     "clsx": "^2.1.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "fluid-tailwind": "^0.3.6",
+    "fluid-tailwind": "^0.3.9",
     "postcss": "^8",
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.1",
