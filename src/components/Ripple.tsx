@@ -16,10 +16,9 @@ type Ripple = {
   yPos: number;
 };
 
-interface RippleStyles extends React.CSSProperties {
+interface RippleStyle extends React.CSSProperties {
   top: string;
   left: string;
-  animationDuration: string;
 }
 
 const rippleVariants = cva(
@@ -72,16 +71,15 @@ export default function Ripple({
   return (
     <>
       {ripples.map((ripple, index) => {
+        const style: RippleStyle = {
+          top: `${ripple.yPos}px`,
+          left: `${ripple.xPos}px`,
+        };
         return (
           <span
             key={index}
             className={cn(rippleVariants({ variant }), className)}
-            style={
-              {
-                top: `${ripple.yPos}px`,
-                left: `${ripple.xPos}px`,
-              } as RippleStyles
-            }
+            style={style}
           ></span>
         );
       })}
