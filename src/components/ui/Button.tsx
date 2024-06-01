@@ -8,7 +8,7 @@ import React, { useRef } from 'react';
 import Ripple from '../Ripple';
 import mergeRefs from 'merge-refs';
 
-type ButtonAllowedTags = 'a' | 'button' | 'span' | React.ElementType<any>;
+type ButtonAllowedTags = React.ElementType<any, 'a' | 'button' | 'span'>;
 
 type ButtonVariants = {
   variant?: 'primary' | 'secondary';
@@ -50,12 +50,10 @@ export default fixedForwardRef(function Button<
     children,
     ...rest
   }: ButtonProps<T>,
-  ref: React.Ref<React.ElementRef<T>>
+  ref: React.ForwardedRef<React.ElementRef<T>>
 ) {
   const Tag: ButtonAllowedTags = as;
-
   const targetRef = useRef<React.ElementRef<T>>(null);
-
   return (
     <Tag
       ref={mergeRefs(ref, targetRef)}
