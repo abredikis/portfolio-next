@@ -19,10 +19,8 @@ type CardProviderProps = {
   children: React.ReactNode;
 } & CardVariants;
 
-export function CardProvider({ children, size, ...rest }: CardProviderProps) {
+export function CardProvider({ children, ...rest }: CardProviderProps) {
   return (
-    <CardContext.Provider value={{ size, ...rest }}>
-      {children}
-    </CardContext.Provider>
+    <CardContext.Provider value={{ ...rest }}>{children}</CardContext.Provider>
   );
 }
