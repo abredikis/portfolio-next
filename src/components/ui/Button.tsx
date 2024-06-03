@@ -24,7 +24,7 @@ type ButtonProps<T extends ButtonAllowedTags = 'a'> = ButtonVariants &
   >;
 
 const buttonVariants = cva(
-  'inline-flex select-none relative font-semibold py-[0.88em] px-[1.77em] rounded-lg transition overflow-hidden cursor-pointer',
+  'inline-flex select-none relative font-semibold py-[0.88em] px-[1.77em] rounded-lg transition overflow-hidden cursor-pointer no-underline',
   {
     variants: {
       variant: {
