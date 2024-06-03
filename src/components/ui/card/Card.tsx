@@ -7,20 +7,23 @@ import { cva } from 'class-variance-authority';
 import { CardProvider } from './CardContext';
 import { Merge } from '@/types/utilities';
 
-type CardAllowedTags = ('div' | 'article' | 'section' | 'figure') &
-  React.ElementType;
-
 export type PolymorphicRef<C extends React.ElementType> =
   React.ComponentPropsWithRef<C>['ref'];
 
+export type CardAllowedTags = ('div' | 'article' | 'section' | 'figure') &
+  React.ElementType;
+
+export type CardSize = 'large' | 'small';
+
 export type CardVariants = {
-  variant?: 'primary';
+  size?: CardSize;
 };
 
 const cardVariants = cva('relative bg-white flex flex-col', {
   variants: {
-    variant: {
-      primary: '',
+    size: {
+      large: 'rounded-3xl',
+      small: 'rounded-2xl',
     },
   },
 });
@@ -36,7 +39,7 @@ type CardProps<T extends CardAllowedTags = 'div'> = CardVariants &
 export default fixedForwardRef(function Card<T extends CardAllowedTags = 'div'>(
   {
     as = 'div' as T,
-    variant = 'primary',
+    size = 'large',
     className,
     children,
     ...rest
@@ -45,11 +48,11 @@ export default fixedForwardRef(function Card<T extends CardAllowedTags = 'div'>(
 ) {
   const Tag: React.ElementType = as;
   return (
-    <CardProvider>
+    <CardProvider size={size}>
       <Tag
         ref={ref}
         {...rest}
-        className={cn(cardVariants({ variant }), className)}
+        className={cn(cardVariants({ size }), className)}
       >
         {children}
       </Tag>
