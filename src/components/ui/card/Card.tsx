@@ -14,15 +14,13 @@ export type PolymorphicRef<C extends React.ElementType> =
   React.ComponentPropsWithRef<C>['ref'];
 
 export type CardVariants = {
-  size?: 'large' | 'small';
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary';
 };
 
-const cardVariants = cva('bg-white flex flex-col', {
+const cardVariants = cva('relative bg-white flex flex-col', {
   variants: {
-    size: {
-      large: '~p-6/8 rounded-3xl',
-      small: '~p-4/6 rounded-2xl',
+    variant: {
+      primary: '',
     },
   },
 });
@@ -39,7 +37,6 @@ export default fixedForwardRef(function Card<T extends CardAllowedTags = 'div'>(
   {
     as = 'div' as T,
     variant = 'primary',
-    size = 'large',
     className,
     children,
     ...rest
@@ -48,11 +45,11 @@ export default fixedForwardRef(function Card<T extends CardAllowedTags = 'div'>(
 ) {
   const Tag: React.ElementType = as;
   return (
-    <CardProvider size={size}>
+    <CardProvider>
       <Tag
         ref={ref}
         {...rest}
-        className={cn(cardVariants({ size }), className)}
+        className={cn(cardVariants({ variant }), className)}
       >
         {children}
       </Tag>
