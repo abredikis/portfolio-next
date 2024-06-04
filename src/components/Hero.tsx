@@ -1,7 +1,6 @@
 import Button from './ui/Button';
 import Image from 'next/image';
 import authorImage from '@public/author.png';
-import Link from 'next/link';
 type HeroProps = React.ComponentPropsWithoutRef<'section'>;
 
 export default function Hero({ ...props }: HeroProps) {
