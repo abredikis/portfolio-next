@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { cva } from "class-variance-authority";
-import { cn } from "../utils/cn";
-import useDebounce from "@/hooks/useDebounce";
+import { useEffect, useState } from 'react';
+import { cva } from 'class-variance-authority';
+import { cn } from '../utils/cn';
+import useDebounce from '@/hooks/useDebounce';
 
 type RippleProps = {
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: 'primary' | 'secondary';
   targetRef: React.RefObject<HTMLElement>;
 };
 
@@ -22,12 +22,12 @@ interface RippleStyle extends React.CSSProperties {
 }
 
 const rippleVariants = cva(
-  "ripple pointer-events-none select-none size-10 opacity-60 absolute rounded-full -ml-5 -mt-5 origin-center",
+  'ripple pointer-events-none select-none size-10 opacity-60 absolute rounded-full -ml-5 -mt-5 origin-center',
   {
     variants: {
       variant: {
-        primary: "bg-primary-50",
-        secondary: "bg-primary-500",
+        primary: 'bg-primary-50',
+        secondary: 'bg-primary-300',
       },
     },
   }
@@ -35,7 +35,7 @@ const rippleVariants = cva(
 
 export default function Ripple({
   className,
-  variant = "primary",
+  variant = 'primary',
   targetRef,
 }: RippleProps) {
   const [ripples, setRipples] = useState<Ripple[]>([]);
@@ -54,12 +54,12 @@ export default function Ripple({
     };
 
     if (target) {
-      target.addEventListener("click", handleClick);
+      target.addEventListener('click', handleClick);
     }
 
     return () => {
       if (target) {
-        target.removeEventListener("click", handleClick);
+        target.removeEventListener('click', handleClick);
       }
     };
   }, [targetRef]);
