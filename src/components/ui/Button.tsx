@@ -24,12 +24,12 @@ type ButtonProps<T extends ButtonAllowedTags = 'a'> = ButtonVariants &
   >;
 
 const buttonVariants = cva(
-  'inline-flex select-none relative font-semibold py-[0.88em] px-[1.77em] rounded-lg transition overflow-hidden cursor-pointer no-underline',
+  'inline-flex select-none text-center justify-center relative font-medium py-[0.88em] px-[1.77em] rounded-lg transition overflow-hidden cursor-pointer no-underline border-2 border-solid border-transparent',
   {
     variants: {
       variant: {
-        primary: 'bg-primary-500 hover:bg-primary-600 transition text-white',
-        secondary: 'bg-white hover:bg-primary-50 text-primary-600',
+        primary: 'bg-primary-500 transition text-white',
+        secondary: 'bg-white text-primary-600',
       },
       size: {
         large: 'text-lg',
