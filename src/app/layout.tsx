@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/utils/cn';
+import NavBar from '@/components/ui/NavBar/NavBar';
 
 const dm_sans = DM_Sans({ subsets: ['latin'] });
 
@@ -24,6 +25,24 @@ export default function RootLayout({
           dm_sans.className
         )}
       >
+        <NavBar
+          navItems={[
+            {
+              itemType: 'link',
+              text: 'Portfolio',
+            },
+            {
+              itemType: 'link',
+              text: 'Contact Me',
+            },
+            {
+              itemType: 'button',
+              variant: 'secondary',
+              size: 'small',
+              text: 'Resume',
+            },
+          ]}
+        />
         {children}
       </body>
     </html>
