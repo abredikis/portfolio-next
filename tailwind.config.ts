@@ -19,7 +19,7 @@ const config: Config = {
       xs: '20rem', // 320px
       sm: '30rem', // 480px
       md: '48rem', // 768px
-      lg: '62rem', // 992px
+      lg: '52rem', // 992px
       xl: '75rem', // 1200px
       xxl: '90rem', // 1440px
       fhd: '100rem', // 1600px
@@ -63,13 +63,13 @@ const config: Config = {
     fluid: (({ theme }) => ({
       defaultScreens: [theme('screens.sm'), theme('screens.xxl')],
     })) satisfies FluidThemeConfig,
-    transitionTimingFunction: {
-      DEFAULT: 'cubic-bezier(0.79,0.14,0.15,0.86);',
-    },
-    transitionDuration: {
-      DEFAULT: '250ms',
-    },
     extend: {
+      transitionTimingFunction: {
+        DEFAULT: 'cubic-bezier(0.37, 0, 0.63, 1)',
+      },
+      transitionDuration: {
+        DEFAULT: '275ms',
+      },
       typography: (({ theme }) => ({
         DEFAULT: {
           css: {
