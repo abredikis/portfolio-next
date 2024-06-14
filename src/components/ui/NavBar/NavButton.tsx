@@ -5,5 +5,9 @@ export type NavButtonProps = {
 } & ButtonProps;
 
 export default function NavButton({ children, text, ...rest }: NavButtonProps) {
-  return <Button {...rest}>{children ? children : text}</Button>;
+  return (
+    <Button key={text} {...rest}>
+      {children ? children : text}
+    </Button>
+  );
 }

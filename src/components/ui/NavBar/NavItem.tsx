@@ -18,7 +18,7 @@ type ButtonNavItemProps = {
 export type NavItemProps = BaseNavItemProps &
   (LinkNavItemProps | ButtonNavItemProps);
 
-export default function NavItem({ itemType, ...rest }: NavItemProps) {
+export default function NavItem({ id, itemType, ...rest }: NavItemProps) {
   if (itemType === 'link') {
     return <NavLink {...rest}></NavLink>;
   } else if (itemType === 'button') {
