@@ -1,6 +1,5 @@
 import { cn } from '@/utils/cn';
-import Button, { ButtonProps } from './ui/Button';
-
+import Button, { ButtonProps } from './Button';
 type BurgerProps = {
   isActive: boolean;
 } & Omit<ButtonProps<'button'>, 'as'>;
