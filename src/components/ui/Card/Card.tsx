@@ -19,14 +19,17 @@ export type CardVariants = {
   size?: CardSize;
 };
 
-const cardVariants = cva('relative bg-white flex flex-col', {
-  variants: {
-    size: {
-      large: 'rounded-3xl',
-      small: 'rounded-2xl',
+const cardVariants = cva(
+  'relative bg-white flex flex-col shadow-lg shadow-primary-100',
+  {
+    variants: {
+      size: {
+        large: 'rounded-3xl',
+        small: 'rounded-2xl',
+      },
     },
-  },
-});
+  }
+);
 
 export type CardProps<T extends CardAllowedTags = 'div'> = CardVariants &
   Merge<
