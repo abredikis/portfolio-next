@@ -28,7 +28,7 @@ const cardVariants = cva('relative bg-white flex flex-col', {
   },
 });
 
-type CardProps<T extends CardAllowedTags = 'div'> = CardVariants &
+export type CardProps<T extends CardAllowedTags = 'div'> = CardVariants &
   Merge<
     React.ComponentPropsWithRef<T>,
     {
