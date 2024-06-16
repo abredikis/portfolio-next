@@ -32,12 +32,12 @@ export default function WorkExperienceCard({
               />
             )}
             <div className=''>
-              <h3 className='mt-0 font-medium text-primary-600'>
+              <h3 className='mt-0 text-balance text-2xl font-semibold text-primary-600'>
                 {workExperience.role}
-                <span className='mx-2 font-extrabold'>·</span>
-                <span className='font-semibold'>{workExperience.title}</span>
               </h3>
               <p className='mb-0 text-sm'>
+                <span className='text-primary-500'>{workExperience.title}</span>
+                <span className='mx-2 font-extrabold'>·</span>
                 {[workExperience?.dateFrom, workExperience?.dateTo]
                   .filter((date) => date)
                   .join(' - ')}
