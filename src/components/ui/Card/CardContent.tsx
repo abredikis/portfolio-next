@@ -11,7 +11,7 @@ const cardContentVariants = cva('d-block w-full text-left prose', {
   variants: {
     size: {
       large: '~p-6/8',
-      small: '~p-4/6',
+      small: 'p-6',
     },
   },
 });
