@@ -17,7 +17,7 @@ export default function EducationCard({
 }: EducationCardProps) {
   return (
     <Card size='small' {...rest} className={cn('h-auto', className)}>
-      <CardActionArea href={education.url}>
+      <CardActionArea href={education.url} target='_blank'>
         <CardContent className='flex h-full flex-col'>
           <div className=''>
             <h3 className='mt-0 text-balance text-xl font-semibold text-primary-600'>
