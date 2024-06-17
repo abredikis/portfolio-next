@@ -5,10 +5,6 @@ import useMediaQuery from '@/hooks/useMediaQuery';
 import getMediaQuery from '@/utils/getMediaQuery';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import useScrollPosition from '@/hooks/useScrollPosition';
-import WorkExperienceCard from '@/components/WorkExperienceCard';
-import logoFreelance from '@public/logo-freelance.svg';
-import { title } from 'process';
-import EducationCard from '@/components/EducationCard';
 import ExperienceEducation from '@/components/ExperienceEducation';
 
 export default function Home() {
