@@ -6,7 +6,7 @@ type HeroProps = React.ComponentPropsWithoutRef<'section'>;
 export default function Hero({ ...props }: HeroProps) {
   return (
     <section className='relative flex min-h-[calc(95dvh-theme(spacing.24))] flex-col justify-start lg:justify-center'>
-      <div className='mx-auto w-full max-w-[90rem] ~px-6/24 ~py-4/8'>
+      <div className='mx-auto w-full max-w-[90rem] ~px-5/24 ~py-4/8'>
         <div className='flex flex-wrap items-center justify-center md:~sm/xxl:~-mx-3/8 lg:flex-nowrap'>
           <div className='relative mb-8 w-full max-w-[380px] md:~sm/xxl:~px-3/8 lg:mb-0 xl:max-w-[469px]'>
             <Image
