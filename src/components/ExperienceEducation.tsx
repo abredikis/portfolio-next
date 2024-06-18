@@ -7,6 +7,8 @@ import logoCivitta from '@public/logo-civitta.jpeg';
 import logoBright from '@public/logo-bright.png';
 import { Education } from '@/types/education';
 import EducationCard from './EducationCard';
+import ProjectCard from './ProjectCard';
+import previewAkola from '@public/preview-desktop-akola.png';
 
 type ExperienceEducationProps = {} & ComponentPropsWithoutRef<'section'>;
 export default function ExperienceEducation({
@@ -110,13 +112,13 @@ export default function ExperienceEducation({
     <section
       {...rest}
       className={cn(
-        'mx-auto w-full max-w-[90rem] ~px-6/24 ~py-12/24',
+        'mx-auto w-full max-w-[90rem] ~px-5/24 ~py-12/24',
         className
       )}
     >
       <div className='grid grid-cols-6 gap-x-6 ~gap-y-14/12 lg:grid-cols-12 lg:~lg:~gap-x-6/12'>
         <div className='col-span-6 flex flex-col items-center ~lg:~gap-6/8 lg:col-span-7'>
-          <div className='prose'>
+          <div>
             <h2 className='text-center'>Work Experience</h2>
             <p className='mb-0 text-center'>Work History Overview</p>
           </div>
@@ -132,7 +134,7 @@ export default function ExperienceEducation({
         </div>
         <div className='col-span-6 flex flex-col gap-x-6 ~gap-y-14/12 lg:col-span-5 lg:~lg:~gap-x-6/12'>
           <div className='flex flex-col items-center ~lg:~gap-6/8'>
-            <div className='prose'>
+            <div>
               <h2 className='text-center'>Education</h2>
               <p className='mb-0 text-center'>Academic Background</p>
             </div>
@@ -147,7 +149,7 @@ export default function ExperienceEducation({
             </div>
           </div>
           <div className='flex flex-col items-center ~lg:~gap-6/8'>
-            <div className='prose'>
+            <div>
               <h2 className='text-center'>Certificates</h2>
               <p className='mb-0 text-center'>Acquired Certifications</p>
             </div>
@@ -162,6 +164,53 @@ export default function ExperienceEducation({
             </div>
           </div>
         </div>
+      </div>
+      <div className='my-12 grid grid-cols-12 gap-6'>
+        <ProjectCard
+          className='col-span-12 xl:col-span-4'
+          project={{
+            title: 'Akola Group',
+            url: 'https://www.akolagroup.lt',
+            imageUrl: previewAkola.src,
+            tags: ['React', 'TypeScript', 'Tailwind', 'WordPress', 'PHP'],
+            content: (
+              <p className='~text-base/lg'>
+                Akola Group is an investment company specializing in agriculture
+                and food production in the Baltics, with over 60 subsidiaries.
+              </p>
+            ),
+          }}
+        />
+        <ProjectCard
+          className='col-span-12 xl:col-span-4'
+          project={{
+            title: 'Akola Group',
+            url: 'https://www.akolagroup.lt',
+            imageUrl: previewAkola.src,
+            tags: ['React', 'TypeScript', 'Tailwind', 'WordPress', 'PHP'],
+            content: (
+              <p className='~text-base/lg'>
+                Akola Group is an investment company specializing in agriculture
+                and food production in the Baltics, with over 60 subsidiaries.
+              </p>
+            ),
+          }}
+        />
+        <ProjectCard
+          className='col-span-12 xl:col-span-4'
+          project={{
+            title: 'Akola Group',
+            url: 'https://www.akolagroup.lt',
+            imageUrl: previewAkola.src,
+            tags: ['React', 'TypeScript', 'Tailwind', 'WordPress', 'PHP'],
+            content: (
+              <p className='~text-base/lg'>
+                Akola Group is an investment company specializing in agriculture
+                and food production in the Baltics, with over 60 subsidiaries.
+              </p>
+            ),
+          }}
+        />
       </div>
     </section>
   );
