@@ -6,7 +6,6 @@ import Tag from './ui/Tag';
 import { cn } from '@/utils/cn';
 import CardActionArea from './ui/Card/CardActionArea';
 import { WorkExperience } from '@/types/workExperience';
-import { fromTheme } from 'tailwind-merge';
 
 type WorkExperienceCardProps = {
   workExperience: WorkExperience;
