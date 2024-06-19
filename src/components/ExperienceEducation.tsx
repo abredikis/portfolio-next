@@ -165,53 +165,6 @@ export default function ExperienceEducation({
           </div>
         </div>
       </div>
-      <div className='my-12 grid grid-cols-12 gap-6'>
-        <ProjectCard
-          className='col-span-12 xl:col-span-4'
-          project={{
-            title: 'Akola Group',
-            url: 'https://www.akolagroup.lt',
-            imageUrl: previewAkola.src,
-            tags: ['React', 'TypeScript', 'Tailwind', 'WordPress', 'PHP'],
-            content: (
-              <p className='~text-base/lg'>
-                Akola Group is an investment company specializing in agriculture
-                and food production in the Baltics, with over 60 subsidiaries.
-              </p>
-            ),
-          }}
-        />
-        <ProjectCard
-          className='col-span-12 xl:col-span-4'
-          project={{
-            title: 'Akola Group',
-            url: 'https://www.akolagroup.lt',
-            imageUrl: previewAkola.src,
-            tags: ['React', 'TypeScript', 'Tailwind', 'WordPress', 'PHP'],
-            content: (
-              <p className='~text-base/lg'>
-                Akola Group is an investment company specializing in agriculture
-                and food production in the Baltics, with over 60 subsidiaries.
-              </p>
-            ),
-          }}
-        />
-        <ProjectCard
-          className='col-span-12 xl:col-span-4'
-          project={{
-            title: 'Akola Group',
-            url: 'https://www.akolagroup.lt',
-            imageUrl: previewAkola.src,
-            tags: ['React', 'TypeScript', 'Tailwind', 'WordPress', 'PHP'],
-            content: (
-              <p className='~text-base/lg'>
-                Akola Group is an investment company specializing in agriculture
-                and food production in the Baltics, with over 60 subsidiaries.
-              </p>
-            ),
-          }}
-        />
-      </div>
     </section>
   );
 }
