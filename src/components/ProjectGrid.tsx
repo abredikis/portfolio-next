@@ -107,7 +107,7 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
         <h2 className='text-center'>My Work</h2>
         <p className='text-center'>A few of my favorite projects</p>
       </div>
-      <div className='grid w-full grid-cols-6 grid-rows-12 place-items-center ~xl:~gap-x-4/6 ~xl:~gap-y-6/7 xl:grid-cols-12'>
+      <div className='grid w-full grid-cols-6 place-items-center ~xl:~gap-x-4/6 ~xl:~gap-y-6/7 xl:grid-cols-12'>
         {projects.map((item, index) => (
           <ProjectCard
             className='col-span-6 w-full xl:col-span-4'
