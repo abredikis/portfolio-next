@@ -19,7 +19,7 @@ const config: Config = {
       xs: '20rem', // 320px
       sm: '30rem', // 480px
       md: '48rem', // 768px
-      lg: '52rem', // 992px
+      lg: '52rem', // 832px
       xl: '75rem', // 1200px
       xxl: '90rem', // 1440px
       fhd: '100rem', // 1600px
