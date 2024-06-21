@@ -117,17 +117,19 @@ export default function ExperienceEducation({
     <section
       {...rest}
       className={cn(
-        'mx-auto w-full max-w-[90rem] ~px-5/24 ~py-12/24',
+        'mx-auto w-full max-w-[90rem] ~my-8/16 ~px-5/24 ~py-6/12',
         className
       )}
     >
-      <div className='grid grid-cols-6 gap-x-6 ~gap-y-14/12 lg:grid-cols-12 lg:~lg:~gap-x-6/12'>
-        <div className='col-span-6 flex flex-col items-center ~lg:~gap-6/8 lg:col-span-7'>
+      <div className='grid grid-cols-6 gap-x-6 ~gap-y-14/12 xl:grid-cols-12 xl:~xl:~gap-x-6/12'>
+        <div className='col-span-6 flex flex-col items-center ~xl:~gap-6/8 xl:col-span-7'>
           <div>
-            <h2 className='text-center'>Work Experience</h2>
-            <p className='mb-0 text-center'>Work History Overview</p>
+            <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
+              Work Experience
+            </h2>
+            <p className='text-center'>Career Overview</p>
           </div>
-          <div className='flex flex-col ~lg:~gap-4/6'>
+          <div className='flex w-full flex-col ~xl:~gap-6/8'>
             {workExperience.map((item, index) => (
               <WorkExperienceCard
                 className='w-full'
@@ -137,13 +139,15 @@ export default function ExperienceEducation({
             ))}
           </div>
         </div>
-        <div className='col-span-6 flex flex-col gap-x-6 ~gap-y-14/12 lg:col-span-5 lg:~lg:~gap-x-6/12'>
-          <div className='flex flex-col items-center ~lg:~gap-6/8'>
+        <div className='col-span-6 flex flex-col gap-x-6 ~gap-y-14/12 xl:col-span-5 xl:~xl:~gap-x-6/12'>
+          <div className='flex flex-col items-center ~xl:~gap-6/8'>
             <div>
-              <h2 className='text-center'>Education</h2>
-              <p className='mb-0 text-center'>Academic Background</p>
+              <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
+                Education
+              </h2>
+              <p className='text-center'>Academic Background</p>
             </div>
-            <div className='flex flex-col ~lg:~gap-4/6'>
+            <div className='flex w-full flex-col ~xl:~gap-6/8'>
               {education.map((item, index) => (
                 <EducationCard
                   className='w-full'
@@ -153,12 +157,14 @@ export default function ExperienceEducation({
               ))}
             </div>
           </div>
-          <div className='flex flex-col items-center ~lg:~gap-6/8'>
+          <div className='flex flex-col items-center ~xl:~gap-6/8'>
             <div>
-              <h2 className='text-center'>Certificates</h2>
+              <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
+                Certificates
+              </h2>
               <p className='mb-0 text-center'>Acquired Certifications</p>
             </div>
-            <div className='flex flex-col ~lg:~gap-4/6'>
+            <div className='flex w-full flex-col ~xl:~gap-6/8'>
               {certificates.map((item, index) => (
                 <EducationCard
                   className='w-full'
