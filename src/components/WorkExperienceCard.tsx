@@ -24,7 +24,7 @@ export default function WorkExperienceCard({
           <div className='flex flex-wrap items-center gap-x-6 gap-y-4'>
             {workExperience.logoUrl && (
               <Image
-                className='m-0 shrink-0 overflow-hidden rounded-xl ~size-14/16 ~max-w-14/16'
+                className='shrink-0 overflow-hidden rounded-xl ~size-14/16 ~max-w-14/16'
                 src={workExperience.logoUrl}
                 width={64}
                 height={64}
@@ -32,32 +32,49 @@ export default function WorkExperienceCard({
               />
             )}
             <div>
-              <h3 className='mt-0 text-balance font-semibold text-primary-600 ~text-xl/2xl'>
+              <h3 className='mb-[0.2em] text-balance font-semibold leading-tight text-primary-600 ~text-lg/xl'>
                 {workExperience.role}
               </h3>
-              <p className='mb-0 flex text-sm'>
-                <span className='flex gap-1 text-primary-500'>
-                  {workExperience.title}{' '}
+              <p className='text-sm'>
+                <span className='text-primary-600'>
+                  {workExperience.title}
                   {workExperience.url && (
-                    <svg
-                      width='14'
-                      height='14'
-                      fill='#0A54FF'
-                      viewBox='0 0 24 24'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <path d='M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6Zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8Z'></path>
-                    </svg>
+                    <span className='relative ml-1 inline-flex size-3 items-center justify-center overflow-hidden'>
+                      <svg
+                        className='absolute inset-0 size-3 -translate-x-3 translate-y-3 transition-transform group-hover:translate-x-0 group-hover:translate-y-0'
+                        fill='currentColor'
+                        stroke='currentColor'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth='2.2'
+                        viewBox='0 0 24 24'
+                        xmlns='http://www.w3.org/2000/svg'
+                      >
+                        <path d='M5.636 18.364 18.364 5.636m0 0h-9.9m9.9 0v9.9'></path>
+                      </svg>
+                      <svg
+                        className='absolute inset-0 size-3 translate-x-0 translate-y-0 transition-transform group-hover:-translate-y-3 group-hover:translate-x-3'
+                        fill='currentColor'
+                        stroke='currentColor'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth='2.2'
+                        viewBox='0 0 24 24'
+                        xmlns='http://www.w3.org/2000/svg'
+                      >
+                        <path d='M5.636 18.364 18.364 5.636m0 0h-9.9m9.9 0v9.9'></path>
+                      </svg>
+                    </span>
                   )}
                 </span>
-                <span className='mx-2 font-extrabold'>·</span>
+                <span className='mx-3 font-extrabold'>·</span>
                 {[workExperience?.dateFrom, workExperience?.dateTo]
                   .filter((date) => date)
                   .join(' - ')}
               </p>
             </div>
           </div>
-          <div className='not-prose ~my-6/7'>
+          <div className='max-w-[65ch] ~my-6/7'>
             {workExperience?.content || children}
           </div>
           {workExperience?.tags?.length && (
