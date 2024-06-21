@@ -7,8 +7,6 @@ import logoCivitta from '@public/logo-civitta.jpeg';
 import logoBright from '@public/logo-bright.png';
 import { Education } from '@/types/education';
 import EducationCard from './EducationCard';
-import ProjectCard from './ProjectCard';
-import previewAkola from '@public/preview-desktop-akola.png';
 
 type ExperienceEducationProps = {} & ComponentPropsWithoutRef<'section'>;
 export default function ExperienceEducation({
