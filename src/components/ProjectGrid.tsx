@@ -28,8 +28,8 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
       ],
       content: (
         <p>
-          Akola Group is an investment company specializing in agriculture and
-          food production in the Baltics. With over 60 subsidiaries.
+          Marketing website for a Latvian tattoo studio. Designed, developed and
+          launched a complete website overhaul.
         </p>
       ),
     },
@@ -40,8 +40,9 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
       tags: ['WordPress', 'PHP', 'Docker', 'React', 'JavaScript', 'HTML & CSS'],
       content: (
         <p>
-          Akola Group is an investment company specializing in agriculture and
-          food production in the Baltics, with over 60 subsidiaries.
+          Marketing website for a Lithuanian investment company specializing in
+          agriculture and food production in the Baltics, with over 60
+          subsidiaries.
         </p>
       ),
     },
@@ -52,8 +53,9 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
       tags: ['WordPress', 'PHP', 'JavaScript', 'HTML & CSS'],
       content: (
         <p>
-          Vilnius Credit Union offers savings accounts, loans, and investments,
-          helping people and businesses manage their finances effectively.
+          Marketing website for a trusted financial institution in Lithuania
+          offering a wide range of services for individuals and businesses. With
+          over 50 million euros in their loan portfolio.
         </p>
       ),
     },
@@ -64,8 +66,9 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
       tags: ['WordPress', 'PHP', 'jQuery', 'HTML & CSS'],
       content: (
         <p>
-          Akola Group is an investment company specializing in agriculture and
-          food production in the Baltics. With over 60 subsidiaries.
+          Marketing website for a Latvian company specializing in the
+          construction of timber houses. With over 15 years of experience and
+          more than 800 projects in 15 countries.
         </p>
       ),
     },
@@ -76,8 +79,9 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
       tags: ['WordPress', 'PHP', 'jQuery', 'HTML & CSS'],
       content: (
         <p>
-          Akola Group is an investment company specializing in agriculture and
-          food production in the Baltics. With over 60 subsidiaries.
+          Marketing website for a Latvian welding company specializing in
+          metalworking, including railings, staircases, and other metal
+          products.
         </p>
       ),
     },
@@ -85,11 +89,11 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
       title: 'Timber Homz',
       imageUrl: previewTimberHomz.src,
       url: 'https://timberhomz.ie/',
-      tags: ['WordPress', 'PHP', 'jQuery', 'HTML & CSS'],
+      tags: ['WordPress', 'PHP', 'JavaScript', 'HTML & CSS'],
       content: (
         <p>
-          Akola Group is an investment company specializing in agriculture and
-          food production in the Baltics. With over 60 subsidiaries.
+          Marketing website for an Irish company specializing in modern,
+          eco-friendly garden rooms, studios, and residential spaces.
         </p>
       ),
     },
