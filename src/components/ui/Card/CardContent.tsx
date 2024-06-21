@@ -7,7 +7,7 @@ import { useCardContext } from './CardContext';
 
 type CardContentProps = React.ComponentPropsWithRef<'div'>;
 
-const cardContentVariants = cva('d-block w-full text-left prose', {
+const cardContentVariants = cva('d-block w-full text-left', {
   variants: {
     size: {
       large: '~p-6/8',
