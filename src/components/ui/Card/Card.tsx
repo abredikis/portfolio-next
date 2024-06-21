@@ -20,7 +20,7 @@ export type CardVariants = {
 };
 
 const cardVariants = cva(
-  'relative bg-white flex flex-col shadow-lg shadow-primary-100 group overflow-hidden transition-all hover:shadow-xl hover:shadow-primary-700/20 border border-transparent hover:border-primary-100',
+  'relative bg-white flex flex-col shadow-lg hover:shadow-primary-500/20 shadow-primary-100 group overflow-hidden transition-all border border-transparent',
   {
     variants: {
       size: {
