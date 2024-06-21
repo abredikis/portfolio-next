@@ -103,17 +103,20 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
     <section
       {...rest}
       className={cn(
-        'mx-auto flex w-full max-w-[90rem] flex-col items-center justify-center ~px-5/24 ~py-12/24',
+        'mx-auto flex w-full max-w-[90rem] flex-col items-center justify-center ~my-8/16 ~px-5/24 ~py-6/12',
         className
       )}
     >
-      <div className='prose ~xl:~mb-6/8'>
-        <h2 className='text-center'>My Work</h2>
+      <div className='~xl:~mb-6/8'>
+        <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
+          My Work
+        </h2>
         <p className='text-center'>A few of my favorite projects</p>
       </div>
-      <div className='grid w-full grid-cols-6 place-items-center ~xl:~gap-x-4/6 ~xl:~gap-y-6/7 xl:grid-cols-12'>
+      <div className='grid w-full grid-cols-6 place-items-center ~xl:~gap-6/8 xl:grid-cols-12'>
         {projects.map((item, index) => (
           <ProjectCard
+            size='small'
             className='col-span-6 w-full xl:col-span-4'
             key={index}
             project={item}
