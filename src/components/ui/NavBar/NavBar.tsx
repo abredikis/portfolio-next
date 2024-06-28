@@ -31,9 +31,9 @@ export default function NavBar({
     <nav
       {...rest}
       className={cn(
-        'fixed left-0 right-0 top-0 z-50 mx-auto flex min-h-24 w-full items-center text-primary-900 transition',
+        'fixed left-0 right-0 top-0 z-50 mx-auto flex min-h-24 w-full items-center border-b border-transparent text-primary-900 transition',
         className,
-        hasScrolled ? 'bg-white' : ''
+        hasScrolled ? 'border-primary-100 bg-white' : ''
       )}
     >
       <div className='relative mx-auto flex w-full max-w-[90rem] items-center ~gap-6/9 ~px-5/24'>
