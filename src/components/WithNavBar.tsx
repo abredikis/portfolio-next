@@ -24,14 +24,17 @@ export default function WithNavBar() {
       navItems={[
         {
           itemType: 'link',
-          text: 'Portfolio',
+          text: 'Experience',
         },
         {
           itemType: 'link',
-          text: 'Contact Me',
+          text: 'Projects',
         },
         {
           itemType: 'button',
+          href: '/files/Alberts_Bredikis_Resume.pdf',
+          target: '_blank',
+          rel: 'noopener noreferrer',
           variant:
             (isDesktop && isScrolled) || !isDesktop ? 'primary' : 'secondary',
           size: 'small',
