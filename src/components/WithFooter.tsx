@@ -1,19 +1,18 @@
 export default function WithFooter() {
   return (
-    <footer className='bg-white py-6 ~mt-24/32'>
-      <div className='mx-auto grid w-full max-w-[90rem] items-center justify-center gap-4 ~px-5/24 lg:grid-cols-[repeat(3,1fr)]'>
-        <p className='text-sm'>
-          Built with <span className='text-primary-600'>Next.js</span> and{' '}
-          <span className='text-primary-600'>Tailwind CSS</span>
-        </p>
-        <p className='text-center text-sm'>
-          © {new Date().getFullYear()} Alberts Bredikis
-        </p>
-        <div className='flex justify-center gap-3 lg:justify-end'>
+    <footer className='bg-white py-6 pb-4 ~mt-14/28 lg:pb-6'>
+      <div className='mx-auto grid w-full max-w-[90rem] items-center justify-center gap-2 ~px-5/24 lg:grid-cols-[repeat(3,1fr)]'>
+        <div className='flex justify-center lg:justify-start'>
+          <p className='text-sm'>
+            Built with <span className='text-primary-600'>Next.js</span> and{' '}
+            <span className='text-primary-600'>Tailwind CSS</span>
+          </p>
+        </div>
+        <div className='order-last flex justify-center gap-3 lg:order-none'>
           <a
             href='https://github.com/abredikis'
             target='_blank'
-            className='flex size-8 items-center justify-center overflow-hidden rounded-md bg-white text-primary-500 transition-colors hover:text-primary-800'
+            className='flex size-9 items-center justify-center overflow-hidden rounded-md bg-white text-primary-900 transition-colors hover:text-primary-800'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -33,14 +32,14 @@ export default function WithFooter() {
           <a
             href='https://www.linkedin.com/in/alberts-bredikis/'
             target='_blank'
-            className='flex size-8 items-center justify-center overflow-hidden rounded-md bg-white text-primary-500 transition-colors hover:text-primary-800'
+            className='flex size-9 items-center justify-center overflow-hidden rounded-md bg-white text-primary-900 transition-colors hover:text-primary-800'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
               viewBox='0 0 509 509'
             >
-              <g fill='currentColor' clip-path='url(#a)'>
+              <g fill='currentColor' clipPath='url(#a)'>
                 <path d='M172.4 190.6H109V399h63.4V190.6ZM326.5 190.6c-36.3 0-46.3 11.9-54.4 27.2v-27.2h-63.4V399H272V281.2c0-18.1 0-36.3 31.7-36.3 31.8 0 31.8 18.2 31.8 36.3V399H399V281.2c0-54.4-9-90.6-72.5-90.6ZM140.7 172.4a31.7 31.7 0 1 0 0-63.4 31.7 31.7 0 0 0 0 63.4Z' />
               </g>
               <defs>
@@ -50,6 +49,11 @@ export default function WithFooter() {
               </defs>
             </svg>
           </a>
+        </div>
+        <div className='flex justify-center lg:justify-end'>
+          <p className='text-sm'>
+            © {new Date().getFullYear()} Alberts Bredikis
+          </p>
         </div>
       </div>
     </footer>
