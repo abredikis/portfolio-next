@@ -16,7 +16,7 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
     {
       title: 'Collective Art & Tattoo Studio',
       imageUrl: previewCollective.src,
-      url: 'https://www.akolagroup.lt/',
+      url: 'https://collectivearttattoostudio.com/en/',
       tags: [
         'UX & UI',
         'WordPress',
@@ -62,7 +62,7 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
     {
       title: 'Timbero',
       imageUrl: previewTimbero.src,
-      url: 'https://www.timbero.lv/',
+      url: 'https://timbero.lv/en/',
       tags: ['WordPress', 'PHP', 'jQuery', 'HTML & CSS'],
       content: (
         <p>
