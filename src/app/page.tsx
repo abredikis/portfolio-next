@@ -5,11 +5,6 @@ import ProjectGrid from '@/components/ProjectGrid';
 
 export default function Home() {
   return (
-    <main className='flex-grow pt-24'>
-      <WithNavBar />
-      <Hero />
-      <ExperienceEducation />
-      <ProjectGrid />
-    </main>
+      <main className='z-10 flex-grow pt-24 leading-relaxed text-primary-900/80'>
   );
 }
