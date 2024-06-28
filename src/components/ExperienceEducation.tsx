@@ -7,8 +7,6 @@ import logoCivitta from '@public/logo-civitta.jpeg';
 import logoBright from '@public/logo-bright.png';
 import { Education } from '@/types/education';
 import EducationCard from './EducationCard';
-import ProjectCard from './ProjectCard';
-import previewAkola from '@public/preview-desktop-akola.png';
 
 type ExperienceEducationProps = {} & ComponentPropsWithoutRef<'section'>;
 export default function ExperienceEducation({
@@ -24,11 +22,12 @@ export default function ExperienceEducation({
       dateTo: 'Present',
       tags: ['React', 'TypeScript', 'Tailwind', 'WordPress', 'PHP'],
       content: (
-        <p className='~text-base/lg'>
-          Develop WordPress solutions for diverse clients, ensuring
-          pixel-perfect implementation, optimizing page speed, and creating
-          seamless editor experiences. Work with notable clients such as Vilnius
-          Credit Union, Girteka, and Akola Group.
+        <p>
+          I work with clients to build web solutions that are user-friendly and
+          deliver strong results. I prioritize performance optimization,
+          ensuring websites load quickly and provide a smooth user experience.
+          This focus on usability and performance has consistently led to
+          satisfied clients and websites that achieve their business goals.
         </p>
       ),
     },
@@ -49,11 +48,13 @@ export default function ExperienceEducation({
         'JavaScript',
       ],
       content: (
-        <p className='~text-base/lg'>
-          Develop WordPress solutions for diverse clients, ensuring
-          pixel-perfect implementation, optimizing page speed, and creating
-          seamless editor experiences. Work with notable clients such as Vilnius
-          Credit Union, Girteka, and Akola Group.
+        <p>
+          At Civitta, I worked with a skilled web development team, working
+          together to build websites for a variety of clients.I advocated for
+          best practices in web development, resulting in improvements in
+          website speed, code clarity, and maintainability. In addition, I
+          created custom solutions like APIs, plugins, and themes to tackle
+          specific client challenges.
         </p>
       ),
     },
@@ -66,11 +67,12 @@ export default function ExperienceEducation({
       dateTo: '2022',
       tags: ['WordPress', 'PHP', 'HTML & CSS', 'jQuery', 'JavaScript'],
       content: (
-        <p className='~text-base/lg'>
-          Develop WordPress solutions for diverse clients, ensuring
-          pixel-perfect implementation, optimizing page speed, and creating
-          seamless editor experiences. Work with notable clients such as Vilnius
-          Credit Union, Girteka, and Akola Group.
+        <p>
+          At Bright, I made initialising new projects easier by creating a
+          custom CLI-based WordPress setup generator tool. This tool saved the
+          team significant time. I also assisted with developing custom themes
+          for several clients, gaining valuable experience in user experience
+          design and client collaboration.
         </p>
       ),
     },
@@ -83,7 +85,7 @@ export default function ExperienceEducation({
       dateFrom: '2016',
       dateTo: '2020',
       content: (
-        <p className='text-base'>
+        <p>
           Acquired knowledge in software design, planning, development and
           maintainance. Gained proficiency in HTML, CSS, PHP, and SQL for web
           development, alongside foundational understanding of OOP and C, C++
@@ -100,9 +102,10 @@ export default function ExperienceEducation({
       dateFrom: '2024',
       url: 'https://www.coursera.org/account/accomplishments/professional-cert/4VFQC637NRTS',
       content: (
-        <p className='text-base'>
-          Acquired basics of essential front-end tech: HTML, CSS, Bootstrap,
-          React, crafting dynamic, responsive web experiences.
+        <p>
+          Solidified core front-end development fundamentals through Meta's
+          Front-End Developer Specialization: HTML, CSS, JavaScript, unit
+          testing, and responsive design.
         </p>
       ),
     },
@@ -112,17 +115,19 @@ export default function ExperienceEducation({
     <section
       {...rest}
       className={cn(
-        'mx-auto w-full max-w-[90rem] ~px-5/24 ~py-12/24',
+        'mx-auto w-full max-w-[90rem] ~my-8/16 ~px-5/24 ~py-6/12',
         className
       )}
     >
-      <div className='grid grid-cols-6 gap-x-6 ~gap-y-14/12 lg:grid-cols-12 lg:~lg:~gap-x-6/12'>
-        <div className='col-span-6 flex flex-col items-center ~lg:~gap-6/8 lg:col-span-7'>
+      <div className='grid grid-cols-6 gap-x-6 ~gap-y-14/12 xl:grid-cols-12 xl:~xl:~gap-x-6/12'>
+        <div className='col-span-6 flex flex-col items-center ~xl:~gap-6/8 xl:col-span-7'>
           <div>
-            <h2 className='text-center'>Work Experience</h2>
-            <p className='mb-0 text-center'>Work History Overview</p>
+            <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
+              Work Experience
+            </h2>
+            <p className='text-center'>Career Overview</p>
           </div>
-          <div className='flex flex-col ~lg:~gap-4/6'>
+          <div className='flex w-full flex-col ~xl:~gap-6/8'>
             {workExperience.map((item, index) => (
               <WorkExperienceCard
                 className='w-full'
@@ -132,13 +137,15 @@ export default function ExperienceEducation({
             ))}
           </div>
         </div>
-        <div className='col-span-6 flex flex-col gap-x-6 ~gap-y-14/12 lg:col-span-5 lg:~lg:~gap-x-6/12'>
-          <div className='flex flex-col items-center ~lg:~gap-6/8'>
+        <div className='col-span-6 flex flex-col gap-x-6 ~gap-y-14/12 xl:col-span-5 xl:~xl:~gap-x-6/12'>
+          <div className='flex flex-col items-center ~xl:~gap-6/8'>
             <div>
-              <h2 className='text-center'>Education</h2>
-              <p className='mb-0 text-center'>Academic Background</p>
+              <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
+                Education
+              </h2>
+              <p className='text-center'>Academic Background</p>
             </div>
-            <div className='flex flex-col ~lg:~gap-4/6'>
+            <div className='flex w-full flex-col ~xl:~gap-6/8'>
               {education.map((item, index) => (
                 <EducationCard
                   className='w-full'
@@ -148,12 +155,14 @@ export default function ExperienceEducation({
               ))}
             </div>
           </div>
-          <div className='flex flex-col items-center ~lg:~gap-6/8'>
+          <div className='flex flex-col items-center ~xl:~gap-6/8'>
             <div>
-              <h2 className='text-center'>Certificates</h2>
+              <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
+                Certificates
+              </h2>
               <p className='mb-0 text-center'>Acquired Certifications</p>
             </div>
-            <div className='flex flex-col ~lg:~gap-4/6'>
+            <div className='flex w-full flex-col ~xl:~gap-6/8'>
               {certificates.map((item, index) => (
                 <EducationCard
                   className='w-full'
