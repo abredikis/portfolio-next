@@ -12,7 +12,7 @@ export default function WithFooter() {
           <a
             href='https://github.com/abredikis'
             target='_blank'
-            className='flex size-9 items-center justify-center overflow-hidden rounded-md bg-white text-primary-900 transition-colors hover:text-primary-800'
+            className='flex size-9 items-center justify-center overflow-hidden rounded-md bg-white text-primary-900 transition-colors hover:text-primary-500'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -32,7 +32,7 @@ export default function WithFooter() {
           <a
             href='https://www.linkedin.com/in/alberts-bredikis/'
             target='_blank'
-            className='flex size-9 items-center justify-center overflow-hidden rounded-md bg-white text-primary-900 transition-colors hover:text-primary-800'
+            className='flex size-9 items-center justify-center overflow-hidden rounded-md bg-white text-primary-900 transition-colors hover:text-primary-500'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
