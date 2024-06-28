@@ -25,24 +25,6 @@ export default function RootLayout({
           dm_sans.className
         )}
       >
-        <NavBar
-          navItems={[
-            {
-              itemType: 'link',
-              text: 'Portfolio',
-            },
-            {
-              itemType: 'link',
-              text: 'Contact Me',
-            },
-            {
-              itemType: 'button',
-              variant: 'secondary',
-              size: 'small',
-              text: 'Resume',
-            },
-          ]}
-        />
         {children}
       </body>
     </html>
