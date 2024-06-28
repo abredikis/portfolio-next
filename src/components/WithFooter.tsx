@@ -1,6 +1,6 @@
 export default function WithFooter() {
   return (
-    <footer className='bg-white ~py-3/5'>
+    <footer className='bg-white py-6 ~mt-24/32'>
       <div className='mx-auto grid w-full max-w-[90rem] items-center justify-center gap-4 ~px-5/24 lg:grid-cols-[repeat(3,1fr)]'>
         <p className='text-sm'>
           Built with <span className='text-primary-600'>Next.js</span> and{' '}
