@@ -19,7 +19,12 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Card {...rest} className={cn('h-full', className)}>
-      <CardActionArea href={project.url} target='_blank' className='h-full'>
+      <CardActionArea
+        href={project.url}
+        target='_blank'
+        className='h-full'
+        rel='noreferrer nofollow'
+      >
         <CardContent className='flex h-full max-w-full flex-col ~gap-8/6 md:flex-row xl:flex-col'>
           <div className='flex w-full flex-grow flex-col'>
             <h3 className='mb-[0.425em] text-balance font-semibold leading-tight text-primary-600 ~text-lg/xl'>
