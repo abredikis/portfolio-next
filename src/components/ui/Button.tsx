@@ -24,13 +24,12 @@ export type ButtonProps<T extends ButtonAllowedTags = 'a'> = ButtonVariants &
   >;
 
 const buttonVariants = cva(
-  'inline-flex select-none text-center justify-center relative font-medium py-[0.75em] px-[1.5em] rounded-lg transition overflow-hidden cursor-pointer no-underline border-2 border-solid border-transparent',
+  'inline-flex select-none text-center justify-center relative font-medium py-[0.75em] px-[1.5em] rounded-lg overflow-hidden transition-colors cursor-pointer no-underline border-2 border-solid border-transparent',
   {
     variants: {
       variant: {
-        primary:
-          'bg-primary-500 transition text-white shadow-lg shadow-primary-100',
-        secondary: 'bg-white text-primary-600 shadow-lg shadow-primary-100',
+        primary: 'bg-primary-500 text-white shadow-lg shadow-primary-400/20',
+        secondary: 'bg-white text-primary-600 shadow-lg shadow-primary-400/20',
       },
       size: {
         large: 'text-lg',
