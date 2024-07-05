@@ -39,24 +39,24 @@ export default forwardRef(function FadeIn<T extends AnimateAllowedTags>(
     elementRef: localRef,
   });
 
+  console.log(config);
+
   return (
     <Animate
       {...rest}
       ref={mergeRefs(ref, localRef)}
       timeline={localTimeline}
       config={{
-        ...{
-          from: { opacity: 0 },
-          to: {
-            opacity: 1,
-            ease: 'expo.out',
-            duration: 1.6,
-            stagger: {
-              amount: 0.38,
-            },
+        from: { opacity: 0, ...config?.from },
+        to: {
+          opacity: 1,
+          ease: 'expo.out',
+          duration: 1.6,
+          stagger: {
+            amount: 0.38,
           },
+          ...config?.to,
         },
-        ...config,
       }}
     />
   );
