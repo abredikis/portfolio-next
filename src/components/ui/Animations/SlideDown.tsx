@@ -50,9 +50,9 @@ export default forwardRef(function SlideDown<T extends AnimateAllowedTags>(
           translateY: 0,
           opacity: 1,
           ease: 'expo.out',
-          duration: 1.6,
+          duration: 1.4,
           stagger: {
-            amount: 0.38,
+            amount: 0.325,
           },
           ...config?.to,
         },
