@@ -45,19 +45,17 @@ export default forwardRef(function SlideDown<T extends AnimateAllowedTags>(
       ref={mergeRefs(ref, localRef)}
       timeline={localTimeline}
       config={{
-        ...{
-          from: { translateY: '-50%', opacity: 0 },
-          to: {
-            translateY: 0,
-            opacity: 1,
-            ease: 'expo.out',
-            duration: 1.6,
-            stagger: {
-              amount: 0.38,
-            },
+        from: { translateY: '-50%', opacity: 0, ...config?.from },
+        to: {
+          translateY: 0,
+          opacity: 1,
+          ease: 'expo.out',
+          duration: 1.6,
+          stagger: {
+            amount: 0.38,
           },
+          ...config?.to,
         },
-        ...config,
       }}
     />
   );
