@@ -56,19 +56,17 @@ export default forwardRef(function SlideUp<
       ref={mergeRefs(ref, localRef)}
       timeline={localTimeline}
       config={{
-        ...{
-          from: ANIMATION_INTENSITY[intensity],
-          to: {
-            translateY: 0,
-            opacity: 1,
-            ease: 'expo.out',
-            duration: 1.625,
-            stagger: {
-              amount: 0.4,
-            },
+        from: { ...ANIMATION_INTENSITY[intensity], ...config?.from },
+        to: {
+          translateY: 0,
+          opacity: 1,
+          ease: 'expo.out',
+          duration: 1.625,
+          stagger: {
+            amount: 0.4,
           },
+          ...config?.to,
         },
-        ...config,
       }}
     />
   );
