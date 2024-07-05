@@ -4,6 +4,8 @@ import NavItem, { NavItemProps } from './NavItem';
 import { useEffect, useState } from 'react';
 import useScrollPosition from '@/hooks/useScrollPosition';
 import Burger from '@/components/ui/Burger';
+import SlideDown from '../Animations/SlideDown';
+import useTimeline from '@/hooks/useTimeline';
 
 export type NavBarProps = {
   navItems?: NavItemProps[];
@@ -18,6 +20,7 @@ export default function NavBar({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const scrollPosition = useScrollPosition();
+  const timeline = useTimeline();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -28,10 +31,12 @@ export default function NavBar({
   }, [scrollPosition]);
 
   return (
-    <nav
+    <SlideDown
+      as='nav'
+      timeline={timeline}
       {...rest}
       className={cn(
-        'fixed left-0 right-0 top-0 z-50 mx-auto flex min-h-24 w-full items-center border-b border-transparent text-primary-900 transition',
+        'fixed left-0 right-0 top-0 z-50 mx-auto flex min-h-24 w-full items-center border-b border-transparent text-primary-900 transition-colors',
         className,
         hasScrolled ? 'border-primary-100 bg-white' : ''
       )}
@@ -63,6 +68,6 @@ export default function NavBar({
           ></Burger>
         </div>
       </div>
-    </nav>
+    </SlideDown>
   );
 }
