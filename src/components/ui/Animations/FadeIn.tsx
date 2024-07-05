@@ -39,8 +39,6 @@ export default forwardRef(function FadeIn<T extends AnimateAllowedTags>(
     elementRef: localRef,
   });
 
-  console.log(config);
-
   return (
     <Animate
       {...rest}
