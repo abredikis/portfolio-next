@@ -115,6 +115,7 @@ export default function ExperienceEducation({
 }: ExperienceEducationProps) {
   return (
     <section
+      id='experience'
       {...rest}
       className={cn(
         'mx-auto w-full max-w-[90rem] ~my-8/16 ~px-5/24 ~py-6/12',
