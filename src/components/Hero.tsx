@@ -12,6 +12,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SlideUp from './ui/Animations/SlideUp';
 import FadeIn from './ui/Animations/FadeIn';
 import useTimeline from '@/hooks/useTimeline';
+import smoothScrollTo from '@/utils/smoothScrollTo';
 
 gsap.registerPlugin(ScrollTrigger);
 type HeroProps = React.ComponentPropsWithoutRef<'section'>;
@@ -98,12 +99,21 @@ export default function Hero({ className, ...rest }: HeroProps) {
               timeline={timeline}
               timelinePosition={'<25%'}
             >
-              <Button className='min-w-fit flex-grow basis-0 xl:flex-grow-0'>
+              <Button
+                as='a'
+                className='min-w-fit flex-grow basis-0 xl:flex-grow-0'
+                href='mailto:bredikisalberts@gmail.com'
+              >
                 Get in touch
               </Button>
               <Button
+                as='button'
                 className='min-w-fit flex-grow basis-0 xl:flex-grow-0'
                 variant='secondary'
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothScrollTo('#projects');
+                }}
               >
                 View projects
               </Button>
