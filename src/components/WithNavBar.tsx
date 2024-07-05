@@ -4,6 +4,7 @@ import NavBar from './ui/NavBar/NavBar';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import getMediaQuery from '@/utils/getMediaQuery';
 import useScrollPosition from '@/hooks/useScrollPosition';
+import smoothScrollTo from '@/utils/smoothScrollTo';
 
 export default function WithNavBar() {
   const [isDesktop, setIsDesktop] = useState(true);
@@ -25,10 +26,16 @@ export default function WithNavBar() {
         {
           itemType: 'link',
           text: 'Experience',
+          onClick: () => {
+            smoothScrollTo('#experience');
+          },
         },
         {
           itemType: 'link',
           text: 'Projects',
+          onClick: () => {
+            smoothScrollTo('#projects');
+          },
         },
         {
           itemType: 'button',
