@@ -63,7 +63,7 @@ const config: Config = {
     })) satisfies FluidThemeConfig,
     extend: {
       transitionTimingFunction: {
-        DEFAULT: 'cubic-bezier(0.37, 0, 0.63, 1)',
+        DEFAULT: 'cubic-bezier(0.26, 0.52, 0.42, 0.94)',
       },
       transitionDuration: {
         DEFAULT: '275ms',
