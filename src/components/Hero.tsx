@@ -11,21 +11,21 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SlideUp from './ui/Animations/SlideUp';
 import FadeIn from './ui/Animations/FadeIn';
+import useTimeline from '@/hooks/useTimeline';
 
 gsap.registerPlugin(ScrollTrigger);
 type HeroProps = React.ComponentPropsWithoutRef<'section'>;
 
 export default function Hero({ className, ...rest }: HeroProps) {
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  const [timeline, setTimeline] = useState<gsap.core.Timeline | null>(null);
-
-  useGSAP(() => {
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-      },
-    });
-    setTimeline(timeline);
+  const timeline = useTimeline({
+    createTimelineOptions: (target) => {
+      return {
+        scrollTrigger: {
+          trigger: target,
+        },
+      };
+    },
   });
 
   return (
@@ -43,6 +43,11 @@ export default function Hero({ className, ...rest }: HeroProps) {
             as='div'
             className='relative mb-8 w-full max-w-[384px] overflow-hidden rounded-xl md:~sm/xxl:~mx-3/8 lg:mb-0 xl:max-w-[420px]'
             timeline={timeline}
+            config={{
+              to: {
+                delay: 0.2,
+              },
+            }}
           >
             <Image
               src={authorImage}
