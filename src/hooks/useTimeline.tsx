@@ -8,8 +8,8 @@ export type CreateTimelineOptions = (
 ) => gsap.TimelineVars | undefined;
 
 interface UseTimelineProps {
-  timeline?: gsap.core.Timeline | null | undefined;
-  createTimelineOptions?: CreateTimelineOptions | null | undefined;
+  timeline?: gsap.core.Timeline | null;
+  createTimelineOptions?: CreateTimelineOptions;
   elementRef?: RefObject<HTMLElement>;
 }
 
@@ -17,24 +17,22 @@ export default function useTimeline({
   timeline,
   createTimelineOptions,
   elementRef,
-}: UseTimelineProps): gsap.core.Timeline | null {
+}: UseTimelineProps = {}): gsap.core.Timeline | null {
   const [localTimeline, setLocalTimeline] = useState<gsap.core.Timeline | null>(
     null
   );
 
   useGSAP(() => {
-    if (typeof timeline !== 'undefined') {
+    if (timeline !== undefined) {
       setLocalTimeline(timeline);
+    } else if (elementRef && elementRef.current) {
+      setLocalTimeline(
+        gsap.timeline(
+          createTimelineOptions ? createTimelineOptions(elementRef.current) : {}
+        )
+      );
     } else {
-      if (elementRef && elementRef.current) {
-        setLocalTimeline(
-          gsap.timeline(
-            createTimelineOptions
-              ? createTimelineOptions(elementRef.current)
-              : {}
-          )
-        );
-      }
+      setLocalTimeline(gsap.timeline());
     }
   }, [timeline, elementRef]);
 
