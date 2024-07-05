@@ -60,7 +60,7 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
     url: 'https://bright.lv/',
     logoUrl: logoBright.src,
     role: 'Junior WordPress Developer',
-    dateFrom: '2021',
+    dateFrom: '2020',
     dateTo: '2022',
     tags: ['WordPress', 'PHP', 'HTML & CSS', 'jQuery', 'JavaScript'],
     content: (
