@@ -1,7 +1,20 @@
+'use client';
+import SlideUp from './ui/Animations/SlideUp';
+
 export default function WithFooter() {
   return (
     <footer className='bg-white py-6 pb-4 ~mt-14/28 lg:pb-6'>
-      <div className='mx-auto grid w-full max-w-[90rem] items-center justify-center gap-2 ~px-5/24 lg:grid-cols-[repeat(3,1fr)]'>
+      <SlideUp
+        as='div'
+        createTimelineOptions={(target: gsap.DOMTarget) => {
+          return {
+            scrollTrigger: {
+              trigger: target,
+            },
+          };
+        }}
+        className='mx-auto grid w-full max-w-[90rem] items-center justify-center gap-2 ~px-5/24 lg:grid-cols-[repeat(3,1fr)]'
+      >
         <div className='flex justify-center lg:justify-start'>
           <p className='text-sm'>
             Built with <span className='text-primary-600'>Next.js</span> and{' '}
@@ -55,7 +68,7 @@ export default function WithFooter() {
             © {new Date().getFullYear()} Alberts Bredikis
           </p>
         </div>
-      </div>
+      </SlideUp>
     </footer>
   );
 }
