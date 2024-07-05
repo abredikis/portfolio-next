@@ -102,6 +102,7 @@ type ProjectGridProps = {} & ComponentPropsWithoutRef<'section'>;
 export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
   return (
     <section
+      id='projects'
       {...rest}
       className={cn(
         'mx-auto flex w-full max-w-[90rem] flex-col items-center justify-center ~my-8/16 ~px-5/24 ~py-6/12',
