@@ -120,6 +120,7 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
         {PROJECT_ENTRIES.map((item, index) => (
           <SlideUp
             key={index}
+            intensity='weak'
             as='div'
             className='col-span-6 h-full w-full xl:col-span-4'
           >
