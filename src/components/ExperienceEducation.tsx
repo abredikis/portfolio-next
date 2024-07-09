@@ -14,17 +14,25 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
   {
     title: 'Freelance',
     logoUrl: logoFreelance.src,
-    role: 'Web Developer',
+    role: 'Full Stack developer',
     dateFrom: 'Aug 2023',
     dateTo: 'Present',
-    tags: ['React', 'TypeScript', 'Tailwind', 'WordPress', 'PHP'],
+    tags: [
+      'Next.js',
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'WordPress',
+      'PHP',
+    ],
     content: (
       <p>
-        I work with clients to build web solutions that are user-friendly and
-        deliver strong results. I prioritize performance optimization, ensuring
-        websites load quickly and provide a smooth user experience. This focus
-        on usability and performance has consistently led to satisfied clients
-        and websites that achieve their business goals.
+        I specialize in developing and launching high-quality websites, focusing
+        on enhancing user interaction and UI design. I work closely with clients
+        to deliver tailored website solutions, ensuring projects are delivered
+        on time and meet specifications. Additionally, I implement effective SEO
+        strategies and provide ongoing maintenance and support for smooth
+        website operations.
       </p>
     ),
   },
@@ -32,14 +40,14 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
     title: 'Civitta',
     url: 'https://civitta.com/',
     logoUrl: logoCivitta.src,
-    role: 'Mid WordPress Developer',
+    role: 'Mid WordPress developer',
     dateFrom: 'May 2022',
     dateTo: 'Aug 2023',
     tags: [
       'WordPress',
       'PHP',
       'Docker',
-      'Vue.js',
+      'React.js',
       'HTML & CSS',
       'jQuery',
       'JavaScript',
@@ -47,8 +55,8 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
     content: (
       <p>
         At Civitta, I worked with a skilled web development team, working
-        together to build websites for a variety of clients.I advocated for best
-        practices in web development, resulting in improvements in website
+        together to build websites for a variety of clients. I advocated for
+        best practices in web development, resulting in improvements in website
         speed, code clarity, and maintainability. In addition, I created custom
         solutions like APIs, plugins, and themes to tackle specific client
         challenges.
@@ -57,12 +65,12 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
   },
   {
     title: 'Bright',
-    url: 'https://bright.lv/',
+    url: 'https://bright.lv/en',
     logoUrl: logoBright.src,
-    role: 'Junior WordPress Developer',
+    role: 'Junior WordPress developer',
     dateFrom: '2020',
     dateTo: '2022',
-    tags: ['WordPress', 'PHP', 'HTML & CSS', 'jQuery', 'JavaScript'],
+    tags: ['WordPress', 'PHP', 'HTML & CSS', 'Vue.js', 'jQuery', 'JavaScript'],
     content: (
       <p>
         At Bright, I made initialising new projects easier by creating a custom
@@ -94,7 +102,7 @@ const EDUCATION_ENTRIES: Education[] = [
 
 const CERTIFICATE_ENTRIES: Education[] = [
   {
-    title: 'Meta Front-End Developer',
+    title: 'Meta Front-End developer',
     source: 'Meta on Coursera',
     dateFrom: '2024',
     url: 'https://www.coursera.org/account/accomplishments/professional-cert/4VFQC637NRTS',
