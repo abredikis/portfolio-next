@@ -1,5 +1,5 @@
 import { cn } from '@/utils/cn';
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, memo } from 'react';
 import ProjectCard from './ProjectCard';
 import previewAkola from '@public/preview-akola.png';
 import previewCollective from '@public/preview-collective.png';
@@ -99,7 +99,8 @@ const PROJECT_ENTRIES: Project[] = [
 ];
 
 type ProjectGridProps = {} & ComponentPropsWithoutRef<'section'>;
-export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
+
+function ProjectGrid({ className, ...rest }: ProjectGridProps) {
   return (
     <section
       id='projects'
@@ -132,3 +133,5 @@ export default function ProjectGrid({ className, ...rest }: ProjectGridProps) {
     </section>
   );
 }
+
+export default memo(ProjectGrid)

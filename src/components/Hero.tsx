@@ -6,7 +6,7 @@ import authorImage from '@public/author.png';
 import SplitText from './ui/SplitText';
 import { cn } from '@/utils/cn';
 import { useGSAP } from '@gsap/react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SlideUp from './ui/Animations/SlideUp';

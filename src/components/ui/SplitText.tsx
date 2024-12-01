@@ -1,5 +1,4 @@
-'use client';
-import React, { cloneElement, isValidElement } from 'react';
+import React, { cloneElement, isValidElement, memo } from 'react';
 
 const CHARACTER_DELIMITER = '';
 const WORD_DELIMITER = /(\s+)/;
@@ -47,7 +46,7 @@ function splitText({
   );
 }
 
-export default function SplitText({
+function SplitText({
   children,
   split = 'words',
   wrapperClass,
@@ -56,10 +55,9 @@ export default function SplitText({
   const processChildren = (children: React.ReactNode): React.ReactNode => {
     return React.Children.map(children, (child) => {
       if (isValidElement(child)) {
-        // Ensure child.props exists and is of the correct type
-        const childElement = child as React.ReactElement<any>; // Use appropriate type if known
+        const childElement = child as React.ReactElement<any>;
         return cloneElement(childElement, {
-          children: processChildren(child.props.children), // Recursively process nested children
+          children: processChildren(child.props.children),
         });
       } else if (typeof child === 'string') {
         return splitText({
@@ -77,3 +75,5 @@ export default function SplitText({
 
   return <>{processedChildren}</>;
 }
+
+export default memo(SplitText)

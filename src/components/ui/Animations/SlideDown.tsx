@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef, useRef } from 'react';
+import { forwardRef, useMemo, useRef } from 'react';
 import Animate, {
   AnimateAllowedTags,
   AnimateProps,
@@ -39,24 +39,28 @@ export default forwardRef(function SlideDown<T extends AnimateAllowedTags>(
     elementRef: localRef,
   });
 
+  const animationConfig = useMemo(() => {
+    return {
+      from: { translateY: '-50%', opacity: 0, ...config?.from },
+      to: {
+        translateY: 0,
+        opacity: 1,
+        ease: 'expo.out',
+        duration: 1.4,
+        stagger: {
+          amount: 0.325,
+        },
+        ...config?.to,
+      },
+    }
+  }, [config])
+
   return (
     <Animate
       {...rest}
       ref={mergeRefs(ref, localRef)}
       timeline={localTimeline}
-      config={{
-        from: { translateY: '-50%', opacity: 0, ...config?.from },
-        to: {
-          translateY: 0,
-          opacity: 1,
-          ease: 'expo.out',
-          duration: 1.4,
-          stagger: {
-            amount: 0.325,
-          },
-          ...config?.to,
-        },
-      }}
+      config={animationConfig}
     />
   );
 });

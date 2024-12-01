@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef, useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useMemo, useRef } from 'react';
 import Animate, {
   AnimateAllowedTags,
   AnimateProps,
@@ -39,23 +39,27 @@ export default forwardRef(function FadeIn<T extends AnimateAllowedTags>(
     elementRef: localRef,
   });
 
+  const animationConfig = useMemo(() => {
+    return {
+      from: { opacity: 0, ...config?.from },
+      to: {
+        opacity: 1,
+        ease: 'expo.out',
+        duration: 1.4,
+        stagger: {
+          amount: 0.325,
+        },
+        ...config?.to,
+      },
+    }
+  }, [config])
+
   return (
     <Animate
       {...rest}
       ref={mergeRefs(ref, localRef)}
       timeline={localTimeline}
-      config={{
-        from: { opacity: 0, ...config?.from },
-        to: {
-          opacity: 1,
-          ease: 'expo.out',
-          duration: 1.4,
-          stagger: {
-            amount: 0.325,
-          },
-          ...config?.to,
-        },
-      }}
+      config={animationConfig}
     />
   );
 });

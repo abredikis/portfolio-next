@@ -1,6 +1,6 @@
 import { WorkExperience } from '@/types/workExperience';
 import { cn } from '@/utils/cn';
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, memo } from 'react';
 import WorkExperienceCard from './WorkExperienceCard';
 import logoFreelance from '@public/logo-freelance.svg';
 import logoCivitta from '@public/logo-civitta.jpeg';
@@ -117,7 +117,7 @@ const CERTIFICATE_ENTRIES: Education[] = [
 ];
 
 type ExperienceEducationProps = {} & ComponentPropsWithoutRef<'section'>;
-export default function ExperienceEducation({
+function ExperienceEducation({
   className,
   ...rest
 }: ExperienceEducationProps) {
@@ -196,3 +196,5 @@ export default function ExperienceEducation({
     </section>
   );
 }
+
+export default memo(ExperienceEducation)

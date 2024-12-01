@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import fixedForwardRef from '@/utils/fixedForwardRef';
 import { Merge } from '@/types/utilities';
 import { cn } from '@/utils/cn';
@@ -38,9 +38,7 @@ export type AnimateProps<T extends AnimateAllowedTags = 'div'> = {
 > &
   ConfigTimelineSettings;
 
-export default fixedForwardRef(function Animate<
-  T extends AnimateAllowedTags = 'div',
->(
+function Animate<T extends AnimateAllowedTags = 'div'>(
   {
     as = 'div' as T,
     className,
@@ -88,4 +86,6 @@ export default fixedForwardRef(function Animate<
       {children}
     </Tag>
   );
-});
+}
+
+export default memo(fixedForwardRef(Animate));
