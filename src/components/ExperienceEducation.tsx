@@ -2,6 +2,7 @@ import { WorkExperience } from '@/types/workExperience';
 import { cn } from '@/utils/cn';
 import { ComponentPropsWithoutRef, memo } from 'react';
 import WorkExperienceCard from './WorkExperienceCard';
+import logoMapon from '@public/logo-mapon.jpg';
 import logoFreelance from '@public/logo-freelance.svg';
 import logoCivitta from '@public/logo-civitta.jpeg';
 import logoBright from '@public/logo-bright.png';
@@ -12,11 +13,30 @@ import SplitText from './ui/SplitText';
 
 const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
   {
+    title: 'Mapon',
+    logoUrl: logoMapon.src,
+    role: 'Frontend developer',
+    dateFrom: 'Aug 2024',
+    dateTo: 'Present',
+    url: 'https://mapon.com/',
+    tags: ['React.js', 'TypeScript', 'CSS Modules', 'Jest', 'Redux Toolkit'],
+    content: (
+      <p>
+        I specialize in developing and launching high-quality websites, focusing
+        on enhancing user interaction and UI design. I work closely with clients
+        to deliver tailored website solutions, ensuring projects are delivered
+        on time and meet specifications. Additionally, I implement effective SEO
+        strategies and provide ongoing maintenance and support for smooth
+        website operations.
+      </p>
+    ),
+  },
+  {
     title: 'Freelance',
     logoUrl: logoFreelance.src,
     role: 'Full Stack developer',
     dateFrom: 'Aug 2023',
-    dateTo: 'Present',
+    dateTo: 'Aug 2024',
     tags: [
       'Next.js',
       'React.js',
@@ -54,12 +74,11 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
     ],
     content: (
       <p>
-        At Civitta, I worked with a skilled web development team, working
-        together to build websites for a variety of clients. I advocated for
-        best practices in web development, resulting in improvements in website
-        speed, code clarity, and maintainability. In addition, I created custom
-        solutions like APIs, plugins, and themes to tackle specific client
-        challenges.
+        At Mapon, I develop and maintain the user interface for our fleet
+        management platform. My work includes implementing new features,
+        refactoring and maintaining legacy code, and optimizing performance. I
+        also conduct code reviews, fix bugs, and collaborate with the team to
+        address specific client needs and improve overall system functionality.
       </p>
     ),
   },
@@ -117,10 +136,7 @@ const CERTIFICATE_ENTRIES: Education[] = [
 ];
 
 type ExperienceEducationProps = {} & ComponentPropsWithoutRef<'section'>;
-function ExperienceEducation({
-  className,
-  ...rest
-}: ExperienceEducationProps) {
+function ExperienceEducation({ className, ...rest }: ExperienceEducationProps) {
   return (
     <section
       id='experience'
@@ -143,7 +159,7 @@ function ExperienceEducation({
           <div className='flex w-full flex-col ~xl:~gap-6/8'>
             {WORK_EXPERIENCE_ENTRIES.map((item, index) => (
               <SlideUp key={index} intensity='weak' className='w-full'>
-                <WorkExperienceCard className='w-full' workExperience={item} />
+                <WorkExperienceCard className='w-full' workExperience={item} size="small" />
               </SlideUp>
             ))}
           </div>
@@ -197,4 +213,4 @@ function ExperienceEducation({
   );
 }
 
-export default memo(ExperienceEducation)
+export default memo(ExperienceEducation);

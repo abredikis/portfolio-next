@@ -10,6 +10,7 @@ export default function WithFooter() {
           return {
             scrollTrigger: {
               trigger: target,
+              start: 'top-=160px bottom'
             },
           };
         }}

@@ -46,7 +46,7 @@ export default function Hero({ className, ...rest }: HeroProps) {
             timeline={timeline}
             config={{
               to: {
-                delay: 0.2,
+                delay: 0.1,
               },
             }}
           >
@@ -67,7 +67,7 @@ export default function Hero({ className, ...rest }: HeroProps) {
               selector='span span'
               intensity='strong'
               timeline={timeline}
-              timelinePosition={'<10%'}
+              timelinePosition={'<8%'}
             >
               <SplitText
                 split='chars'
@@ -83,7 +83,7 @@ export default function Hero({ className, ...rest }: HeroProps) {
               as='span'
               selector='span span'
               timeline={timeline}
-              timelinePosition={'<25%'}
+              timelinePosition={'<16%'}
             >
               <SplitText split='words'>
                 <p className='mx-auto mb-8 max-w-[46ch] text-center !leading-relaxed text-primary-900 ~text-base/lg lg:mx-0 lg:text-left'>
@@ -97,7 +97,7 @@ export default function Hero({ className, ...rest }: HeroProps) {
               as='div'
               className='flex flex-wrap ~gap-3/4'
               timeline={timeline}
-              timelinePosition={'<25%'}
+              timelinePosition={'<22%'}
             >
               <Button
                 as='a'

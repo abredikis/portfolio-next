@@ -22,7 +22,7 @@ export default forwardRef(function FadeIn<T extends AnimateAllowedTags>(
       return {
         scrollTrigger: {
           trigger: target,
-          start: 'top bottom-=5%',
+          start: 'top bottom-=80px',
         },
       };
     },
@@ -44,10 +44,10 @@ export default forwardRef(function FadeIn<T extends AnimateAllowedTags>(
       from: { opacity: 0, ...config?.from },
       to: {
         opacity: 1,
-        ease: 'expo.out',
-        duration: 1.4,
+        ease: 'power4.out',
+        duration: 1.2,
         stagger: {
-          amount: 0.325,
+          amount: 0.175,
         },
         ...config?.to,
       },

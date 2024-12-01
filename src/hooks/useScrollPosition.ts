@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import useDebounce from "./useDebounce";
 
-const DEBOUNCE_DELAY_MS = 50;
+const DEBOUNCE_DELAY_MS = 10;
 
 export default function useScrollPosition() {
   const [position, setPosition] = useState<number>(0);
