@@ -52,14 +52,14 @@ export default function Hero({ className, ...rest }: HeroProps) {
           >
             <Image
               src={authorImage}
-              fetchPriority='high'
+              placeholder="blur"
               priority={true}
               quality={100}
               alt='Portrait of Alberts Bredikis'
               sizes='420px'
               className='relative z-0 aspect-[1/1.22] w-full object-cover'
             />
-            <div className='pointer-events-none absolute inset-0 z-10 bg-primary-500 bg-opacity-10 mix-blend-lighten'></div>
+            <div className='pointer-events-none absolute inset-0 z-10 bg-primary-400 bg-opacity-[0.075] mix-blend-lighten'></div>
           </FadeIn>
           <div className='basis-full pl-0 md:basis-auto md:~sm/xxl:~px-3/8'>
             <SlideUp
