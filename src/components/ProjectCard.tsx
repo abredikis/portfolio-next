@@ -27,7 +27,7 @@ export default function ProjectCard({
       >
         <CardContent className='flex h-full max-w-full flex-col ~gap-8/6 md:flex-row xl:flex-col'>
           <div className='flex w-full flex-grow flex-col'>
-            <h3 className='mb-[0.425em] text-balance font-semibold leading-tight text-primary-600 ~text-lg/xl'>
+            <h3 className='mb-[0.425em] text-balance font-semibold leading-tight text-primary-500 ~text-lg/xl'>
               {project.title}
             </h3>
             <div className='max-w-[65ch]'>{project.content || children}</div>

@@ -32,11 +32,16 @@ export default function WorkExperienceCard({
               />
             )}
             <div>
-              <h3 className='mb-[0.2em] text-balance font-semibold leading-tight text-primary-600 ~text-lg/xl'>
+              <h3 className='mb-[0.2em] text-balance font-semibold leading-tight text-primary-500 ~text-lg/xl'>
                 {workExperience.role}
               </h3>
               <p className='text-sm'>
-                <span className='text-primary-600'>
+                <span
+                  className={cn(
+                    'text-primary-500',
+                    workExperience.url && 'underline'
+                  )}
+                >
                   {workExperience.title}
                   {workExperience.url && (
                     <span className='relative ml-1 inline-flex size-3 items-center justify-center overflow-hidden'>

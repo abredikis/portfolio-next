@@ -10,7 +10,7 @@ export default function WithFooter() {
           return {
             scrollTrigger: {
               trigger: target,
-              start: 'top-=160px bottom'
+              start: 'top-=160px bottom',
             },
           };
         }}
@@ -18,8 +18,8 @@ export default function WithFooter() {
       >
         <div className='flex justify-center lg:justify-start'>
           <p className='text-sm'>
-            Built with <span className='text-primary-600'>Next.js</span> and{' '}
-            <span className='text-primary-600'>Tailwind CSS</span>
+            Built with <span className='text-primary-500'>Next.js</span> and{' '}
+            <span className='text-primary-500'>Tailwind CSS</span>
           </p>
         </div>
         <div className='order-last flex justify-center gap-3 lg:order-none'>

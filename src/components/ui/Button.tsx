@@ -29,7 +29,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: 'bg-primary-500 text-white shadow-lg shadow-primary-400/20',
-        secondary: 'bg-white text-primary-600 shadow-lg shadow-primary-400/20',
+        secondary: 'bg-white text-primary-500 shadow-lg shadow-primary-400/20',
       },
       size: {
         large: 'text-lg',

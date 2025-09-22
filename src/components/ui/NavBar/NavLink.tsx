@@ -16,7 +16,7 @@ export default function NavLink({
       key={text}
       {...rest}
       className={cn(
-        'cursor-pointer transition-colors hover:text-primary-600',
+        'cursor-pointer transition-colors hover:text-primary-500',
         className
       )}
     >
