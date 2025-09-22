@@ -1,26 +1,40 @@
-import { useEffect, useState } from 'react';
-import useDebounce from "./useDebounce";
-
-const DEBOUNCE_DELAY_MS = 10;
+import { useEffect, useRef, useState } from 'react';
 
 export default function useScrollPosition() {
-  const [position, setPosition] = useState<number>(0);
-
-  const debouncedPosition = useDebounce(position, DEBOUNCE_DELAY_MS);
+  const [scrollTop, setScrollTop] = useState<number>(0);
+  const rafRef = useRef<number>();
+  const lastScrollTop = useRef<number>(0);
 
   useEffect(() => {
-    const updatePosition = () => {
-      setPosition(document.documentElement.scrollTop);
+    const updateScrollTop = () => {
+      const currentScrollTop = document.documentElement.scrollTop;
+
+      if (currentScrollTop !== lastScrollTop.current) {
+        lastScrollTop.current = currentScrollTop;
+        setScrollTop(currentScrollTop);
+      }
     };
 
-    window.addEventListener("scroll", updatePosition);
+    const handleScroll = () => {
+      if (rafRef.current) return;
 
-    updatePosition();
+      rafRef.current = requestAnimationFrame(() => {
+        updateScrollTop();
+        rafRef.current = undefined;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    updateScrollTop();
 
     return () => {
-      window.removeEventListener("scroll", updatePosition);
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
     };
   }, []);
 
-  return debouncedPosition;
+  return scrollTop;
 }
