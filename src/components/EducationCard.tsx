@@ -20,11 +20,13 @@ export default function EducationCard({
       <CardActionArea href={education.url} target='_blank'>
         <CardContent className='flex h-full flex-col'>
           <div>
-            <h3 className='mb-[0.2em] text-balance font-semibold leading-tight text-primary-600 ~text-lg/xl'>
+            <h3 className='mb-[0.2em] text-balance font-semibold leading-tight text-primary-500 ~text-lg/xl'>
               {education.title}
             </h3>
             <p className='text-sm'>
-              <span className='text-primary-500'>
+              <span
+                className={cn('text-primary-500', education.url && 'underline')}
+              >
                 {' '}
                 {education.source}
                 {education.url && (

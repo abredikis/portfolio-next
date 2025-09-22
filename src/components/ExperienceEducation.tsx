@@ -19,7 +19,15 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
     dateFrom: 'Aug 2024',
     dateTo: 'Present',
     url: 'https://mapon.com/',
-    tags: ['React.js', 'TypeScript', 'CSS Modules', 'Jest', 'Redux Toolkit'],
+    tags: [
+      'React',
+      'Redux Toolkit',
+      'TypeScript',
+      'Storybook',
+      'Jest',
+      'HTML & CSS',
+      'Docker',
+    ],
     content: (
       <p>
         At Mapon, I develop and maintain the user interface for our fleet
