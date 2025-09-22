@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <WithBackgroundAccent />
-      <main className='z-10 flex-grow pt-24 leading-relaxed text-primary-900/80'>
+      <main className='z-10 flex-grow pt-24 leading-relaxed text-black'>
         <WithNavBar />
         <Hero />
         <ExperienceEducation />

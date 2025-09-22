@@ -19,10 +19,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={cn(
-          'flex min-h-screen flex-col bg-primary-50',
-          dm_sans.className
-        )}
+        className={cn('flex min-h-screen flex-col bg-white', dm_sans.className)}
       >
         {children}
       </body>
