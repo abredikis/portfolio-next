@@ -33,7 +33,7 @@ export default forwardRef(function SlideUp<
       return {
         scrollTrigger: {
           trigger: target,
-          start: 'top bottom-=80px'
+          start: 'top bottom-=7%',
         },
       };
     },
@@ -57,9 +57,9 @@ export default forwardRef(function SlideUp<
         translateY: 0,
         opacity: 1,
         ease: 'power4.out',
-        duration: 1.2,
+        duration: 1.475,
         stagger: {
-          amount: 0.175,
+          amount: 0.225,
         },
         ...config?.to,
       },
