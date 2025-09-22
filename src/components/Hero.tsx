@@ -46,20 +46,20 @@ export default function Hero({ className, ...rest }: HeroProps) {
             timeline={timeline}
             config={{
               to: {
-                delay: 0.1,
+                delay: 0.12,
               },
             }}
           >
             <Image
               src={authorImage}
-              placeholder="blur"
+              placeholder='blur'
               priority={true}
               quality={100}
               alt='Portrait of Alberts Bredikis'
               sizes='420px'
               className='relative z-0 aspect-[1/1.22] w-full object-cover'
             />
-            <div className='pointer-events-none absolute inset-0 z-10 bg-primary-400 bg-opacity-[0.075] mix-blend-lighten'></div>
+            <div className='pointer-events-none absolute inset-0 z-10 bg-primary-300 bg-opacity-[0.075] mix-blend-lighten'></div>
           </FadeIn>
           <div className='basis-full pl-0 md:basis-auto md:~sm/xxl:~px-3/8'>
             <SlideUp
@@ -67,7 +67,7 @@ export default function Hero({ className, ...rest }: HeroProps) {
               selector='span span'
               intensity='strong'
               timeline={timeline}
-              timelinePosition={'<8%'}
+              timelinePosition={'<20%'}
             >
               <SplitText
                 split='chars'
@@ -87,9 +87,8 @@ export default function Hero({ className, ...rest }: HeroProps) {
             >
               <SplitText split='words'>
                 <p className='mx-auto mb-8 max-w-[46ch] text-center !leading-relaxed text-primary-900 ~text-base/lg lg:mx-0 lg:text-left'>
-                  a results-driven web developer with 4 years of success
-                  crafting clean, reusable code to enhance page speed, elevate
-                  user experience and improve SEO performance.
+                  a Front-End developer specializing in React, with a strong
+                  focus on code quality and long-term maintainability.
                 </p>
               </SplitText>
             </SlideUp>
@@ -97,7 +96,7 @@ export default function Hero({ className, ...rest }: HeroProps) {
               as='div'
               className='flex flex-wrap ~gap-3/4'
               timeline={timeline}
-              timelinePosition={'<22%'}
+              timelinePosition={'<20%'}
             >
               <Button
                 as='a'
@@ -112,10 +111,10 @@ export default function Hero({ className, ...rest }: HeroProps) {
                 variant='secondary'
                 onClick={(e) => {
                   e.preventDefault();
-                  smoothScrollTo('#projects');
+                  smoothScrollTo('#experience');
                 }}
               >
-                View projects
+                Work Experience
               </Button>
             </SlideUp>
           </div>

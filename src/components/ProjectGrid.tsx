@@ -90,7 +90,7 @@ function ProjectGrid({ className, ...rest }: ProjectGridProps) {
           <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
             My Work
           </h2>
-          <p className='text-center'>A few of my favorite projects</p>
+          <p className='text-center'>Real-world products I contributed to</p>
         </SplitText>
       </SlideUp>
       <div className='grid w-full grid-cols-6 place-items-center ~xl:~gap-6/8 xl:grid-cols-12'>
@@ -104,6 +104,22 @@ function ProjectGrid({ className, ...rest }: ProjectGridProps) {
             <ProjectCard size='small' className='w-full' project={item} />
           </SlideUp>
         ))}
+      </div>
+      <div className='flex w-full justify-center text-sm text-primary-900 ~xl:~mt-6/8'>
+        <SlideUp>
+          <p className='text-center'>
+            You can view the source code for this portfolio site on{' '}
+            <a
+              href='https://github.com/abredikis/portfolio-next'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary-500 underline'
+            >
+              GitHub
+            </a>
+            !
+          </p>
+        </SlideUp>
       </div>
     </section>
   );

@@ -45,8 +45,8 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
     dateFrom: 'Aug 2023',
     dateTo: 'Aug 2024',
     tags: [
+      'React',
       'Next.js',
-      'React.js',
       'TypeScript',
       'Tailwind CSS',
       'WordPress',
@@ -71,13 +71,13 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
     dateFrom: 'May 2022',
     dateTo: 'Aug 2023',
     tags: [
+      'React',
+      'JavaScript',
       'WordPress',
       'PHP',
       'Docker',
-      'React.js',
       'HTML & CSS',
       'jQuery',
-      'JavaScript',
     ],
     content: (
       <p>
@@ -97,7 +97,7 @@ const WORK_EXPERIENCE_ENTRIES: WorkExperience[] = [
     role: 'Junior WordPress developer',
     dateFrom: '2020',
     dateTo: '2022',
-    tags: ['WordPress', 'PHP', 'HTML & CSS', 'Vue.js', 'jQuery', 'JavaScript'],
+    tags: ['Vue.js', 'JavaScript', 'WordPress', 'PHP', 'HTML & CSS', 'jQuery'],
     content: (
       <p>
         At Bright, I made initialising new projects easier by creating a custom
@@ -116,6 +116,7 @@ const EDUCATION_ENTRIES: Education[] = [
     source: 'Riga Technical College',
     dateFrom: '2016',
     dateTo: '2020',
+    url: 'https://www.rtk.lv/en/',
     content: (
       <p>
         Acquired knowledge in software design, planning, development and
@@ -156,7 +157,7 @@ function ExperienceEducation({ className, ...rest }: ExperienceEducationProps) {
     >
       <div className='grid grid-cols-6 gap-x-6 ~gap-y-14/12 xl:grid-cols-12 xl:~xl:~gap-x-6/12'>
         <div className='col-span-6 flex flex-col items-center ~xl:~gap-6/8 xl:col-span-7'>
-          <SlideUp ubtebs='asdasd'>
+          <SlideUp>
             <SplitText split='chars'>
               <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
                 Work Experience
@@ -175,10 +176,26 @@ function ExperienceEducation({ className, ...rest }: ExperienceEducationProps) {
               </SlideUp>
             ))}
           </div>
+          <div className='flex w-full justify-center text-sm text-primary-900'>
+            <SlideUp>
+              <p className='text-center'>
+                For a full overview of my experience, check my{' '}
+                <a
+                  href='/files/Alberts_Bredikis_Resume.pdf'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-primary-500 underline'
+                >
+                  resume
+                </a>
+                !
+              </p>
+            </SlideUp>
+          </div>
         </div>
         <div className='col-span-6 flex flex-col gap-x-6 ~gap-y-14/12 xl:col-span-5 xl:~xl:~gap-x-6/12'>
           <div className='flex flex-col items-center ~xl:~gap-6/8'>
-            <SlideUp selector='span'>
+            <SlideUp as='span' selector='span'>
               <SplitText split='chars'>
                 <h2 className='mb-[0.225em] text-balance text-center font-semibold leading-tight text-primary-900 ~text-3xl/4xl'>
                   Education
